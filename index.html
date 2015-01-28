@@ -1,0 +1,266 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="author" content="Teemu Taskula">
+		<link rel="icon" href="images/favicon.png">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery.details.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Numeron arvauslogiikka -->
+		<script type="text/javascript" src="js/quessthenumber.js"></script>
+		<!-- News script -->
+		<script type="text/javascript" src="js/news.js"></script>
+		<!-- Flickr REST API -->
+		<script type="text/javascript" src="js/rest.js"></script>
+		<!-- video.js -->
+		<link rel="stylesheet" type="text/css" href="video-js/video-js.min.css">
+		<script src="video-js/video.js"></script>
+		<script>
+  			videojs.options.flash.swf = "video-js/video-js.swf";
+		</script>
+		<!-- video-effects -->
+		<script src="js/video-effects.js"></script>
+
+		<title>Roclimbers</title> 
+	</head> 
+
+	<body>
+		<!-- ankkuri sivun yläosalle -->
+		<div id="top"></div>
+
+		<img id="header-img-home" src="images/header-home.png" alt="Header Home IMG">
+
+		<nav>
+			<ul>
+				<li><a href="about.html">Roclimbers</a></li>
+				<li><a href="project.html">Projekti</a></li>
+				<li><a href="assignments.html">Harjoitukset</a></li>
+				<li class="selected"><a href="index.html">Etusivu</a></li>
+			</ul>
+		</nav>
+
+		<header>
+			<img id="logo" src="images/logo.png" alt="Logo IMG">
+		</header>
+
+
+		<div class="container-fluid" id="home-wrapper">
+
+			<!-- pikalinkit harjoituksiin -->
+			<aside class="col-xs-12 col-sm-5 col-lg-4 pull-right" style="margin-top:-40px;">
+				
+				<div id="sidebar">
+					<details>
+						<summary>Katso Kaikki Harjoitukset:</summary>
+						<ul>
+							<li><a href="assignments.html#h-1">HTML 5 + CSS</a></li>
+							<li><a href="assignments.html#h-2">Javascript</a></li>
+							<li><a href="assignments.html#h-3">Photoshop</a></li>
+							<li><a href="assignments.html#h-4">HTML5 Canvas</a></li>
+							<li><a href="assignments.html#h-5">HTML5 Video/Audio</a></li>
+							<li><a href="assignments.html#h-6">Projektityö</a></li>
+						</ul>
+					</details>
+				</div>
+
+				<section id="news-wrapper" class="gradient-bg">
+
+					<h1 class="section-title">Juuri nyt!</h1>
+
+					<img src="Mainoslehtinen_verkko.jpg" style="width: 100%;height:auto;padding:15px;">
+					
+					<h1 class="section-title">Uutiset</h1>
+
+					<article id="piece-of-news">
+						<h3></h3>
+						<p></p>
+						<span id="time"></span>
+					</article>
+
+					<div id="controls" style="padding-left:15px;">
+
+						<button id="prev" type="button" class="btn btn-default btn-lg">
+								<span class="glyphicon glyphicon-backward"></span>
+						</button>
+						<button id="pause" type="button" class="btn btn-default btn-lg">
+								<span class="glyphicon glyphicon-pause"></span>
+						</button>
+						<button id="resume" type="button" class="btn btn-default btn-lg" style="display: none;">
+								<span class="glyphicon glyphicon-play"></span>
+						</button>
+						<button id="next" type="button" class="btn btn-default btn-lg">
+								<span class="glyphicon glyphicon-forward"></span>
+						</button>
+						
+					</div>
+						
+				</section>
+				
+			</aside>
+
+			<!-- Etusivun pääsisältö -->
+			<section class="col-xs-12 col-sm-7 pull-left gradient-bg" id="home-content-wrapper">
+
+				<div class="content-section" id="guess-the-number-wrapper">
+					<h1 class="section-title">Numeron arvaus -peli</h1>
+					<p style="padding-top:10px;">Arvaa, mikä oli Jussin viimeisen kallioseinämän vaikeusaste. (1-10 väliltä)</p>
+
+					<form id="the-guess">
+						<input type="number" max="10" min="1" style="border: 1px solid transparent;
+border-radius: 4px;border-color: #ccc;padding: 6px 12px">
+						<input type="submit" value="Arvaa" class="btn btn-default">
+						<input id="reset-guess" type="button" class="btn btn-default" value="Arvo uusi luku">
+					</form>
+					
+					<p id="guess-response"></p>
+				</div>
+
+				<div class="content-section">
+					<h1 class="section-title">Kalliokiipely kuvia Flickr:stä</h1>
+					<button id="get-pics" class="btn btn-default btn-lg">Hae kuvia</button>
+					<div id="flickr-pics"></div>
+				</div>
+
+				<div class="content-section">
+					<h1 class="section-title">Roclimbers elokuvan traileri!</h1>
+					<article>
+						
+						<h2>&lt;video&gt;</h2>
+						<div style="width:100%;">
+							<div id="roclimbers-video-wrapper">
+
+								<div id="of-buttons-wrapper">
+									<p>Add optical flares to make it more awesome!</p>
+									<button class="of-button btn btn-default" id="1">Optical Flare 1</button>
+									<button class="of-button btn btn-default" id="2">Optical Flare 2</button>
+									<button class="of-button btn btn-default" id="3">Optical Flare 3</button>
+								</div>
+
+								<div class="overlay" id="of-1"></div>
+								<div class="overlay" id="of-2"></div>
+								<div class="overlay" id="of-3"></div>
+
+								<video id="roclimbers-video" class="video-js vjs-default-skin vjs-big-play-centered" preload="auto" poster="videos/Roclimbers_trailer_poster.jpg" controls data-setup="{}">
+									<source src="videos/Roclimbers_trailer.mp4" type="video/mp4">
+									<source src="videos/Roclimbers_trailer.webm" type="video/webm">
+									<source src="videos/Roclimbers_trailer.ogv" type="video/ogg">
+									Your browser sucks!
+								</video>
+
+								
+								<div id="roclimbers-canvas-wrapper">
+									<canvas id="roclimbers-canvas"></canvas>
+									<h2>&lt;canvas&gt;</h2>
+									<div id="cnv-buttons-wrapper">
+										<button id="bw" class="cnv-button btn btn-default">Black &amp; White</button>
+										<button id="invert" class="cnv-button btn btn-default">Invert</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</article>
+				</div>
+
+				<div class="content-section">
+					<h1 class="section-title">Random asioita</h1>
+					<article>
+						<h2>Näin Jussi putosi kuolemaansa</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+					</article>
+					<article>
+						<h2>Tämä sivu on suunnattu hardore-kiipeilijöille!</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+					</article>
+					<article>
+						<h2>Katso uusimmat kiipeilyvideot ennen muita.</h2>
+						<p>Morbi ligula risus, mattis non gravida ultrices, ultrices vitae nisl. In hac habitasse platea dictumst. Integer ut tempus odio. Sed in hendrerit nisl. Suspendisse lacinia nisi id risus dignissim, quis euismod ex luctus. Vestibulum eleifend faucibus massa, vitae aliquam libero rhoncus cursus. Curabitur ut turpis finibus, euismod lacus eu, fermentum sem. Phasellus viverra magna tellus. Etiam vulputate nec lacus a dignissim.</p>
+					</article>
+					<article>
+						<h2>Tule kokeilemaan 11C kallioseinämää!</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+					</article>
+					<article>
+						<h2>Roclimbers tarjoaa "Once In A Lifetime" kokemuksia</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+					</article>
+				</div>
+				
+			</section>
+
+		</div>
+
+		<!-- pikalinkki sivun ylälaitaan -->
+		<a id="to-top" href="#top"><img src="images/finger-up-circle.png" alt="Finger IMG" data-toggle="tooltip" data-placement="left" title="Ylös"></a>
+
+		<!-- Nappulat animaation pysäyttämiseksi -->
+		<button class="bg-animation" id="stop-bg-animation">Pysäytä taustan animaatio</button>
+		<button class="bg-animation" id="start-bg-animation" style="display:none;">Jatka taustan animaatiota</button>
+		
+		<footer>
+			<p>
+				© Copyright 2014 by
+				<span class="vcard">
+					<span class="fn">Teemu Taskula</span>, <span class="email">teemu.taskula@aalto.fi</span> -  <span class="org">Aalto-yliopisto</span>.
+				</span>
+			</p>
+			<p>
+				<span>All picture copyrights belong to <a class="url fn" href="http://500px.com/psychid">Timo Junttila</a></span>.
+			</p>
+		</footer>
+
+		<script type="text/javascript">
+			// <details> tagin polyfill
+			$('details').details();
+		</script>
+
+		<script type="text/javascript">
+
+			// Once the video is ready
+			_V_("roclimbers-video").ready(function(){
+
+			    var myPlayer = this;    // Store the video object
+			    
+			    var aspectRatio = 9/16; // Make up an aspect ratios
+			    var overlaysAP = 1/2.35;
+
+			    function resizeVideoJS(){
+			      // Get the parent element's actual width
+			      //var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+			      var width = $("#roclimbers-video-wrapper").outerWidth();
+			      // Set width to fill parent element, Set height
+			      myPlayer.width(width).height( width * aspectRatio );
+
+			      //update also the overlays
+			      $(".overlay").each(function(){
+			      	$(this).width(width).height(width * overlaysAP);
+			      	$(this).css("margin-top", (width * (aspectRatio - overlaysAP))/2 );
+			      });
+			    }
+
+			    // wait for other scripts to change the parents width
+			    $(window).load(function(){
+			    	resizeVideoJS(); // Initialize the function
+			    	window.onresize = resizeVideoJS; // Call the function on resize
+			    });
+			});
+		</script>
+
+			
+	</body> 
+
+</html> 

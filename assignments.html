@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="author" content="Teemu Taskula">
+		<link rel="icon" href="images/favicon.png">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery.details.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		
+		<title>Roclimbers</title> 
+	</head> 
+
+	<body>
+		<!-- ankkuri sivun yläosalle -->
+		<div id="top"></div>
+
+		<img id="header-img-harj" src="images/header-harj.png" alt="Header Harjoitus IMG">
+
+		<nav>
+			<ul>
+				<li><a href="about.html">Roclimbers</a></li>
+				<li><a href="project.html">Projekti</a></li>
+				<li class="selected"><a href="assignments.html">Harjoitukset</a></li>
+				<li><a href="index.html">Etusivu</a></li>
+			</ul>
+		</nav>
+
+		<header>
+			<img id="logo" src="images/logo.png" alt="Logo IMG">
+		</header>
+
+
+		<!-- Assignments sivun pääsisältö -->
+		<div class="container-fluid" id="harj-wrapper">
+
+			<div id="mobile-menu-wrapper">
+				<details>
+					<summary>Selaa Harjoituksia:</summary>
+					<ul>
+						<li><a href="#h-1">HTML 5 + CSS</a></li>
+						<li><a href="#h-2">Javascript</a></li>
+						<li><a href="#h-3">Photoshop</a></li>
+						<li><a href="#h-4">HTML5 Canvas</a></li>
+						<li><a href="#h-5">HTML5 Video/Audio</a></li>
+						<li><a href="#h-6">Projektityö</a></li>
+					</ul>
+				</details>
+			</div>
+
+			<div class="col-xs-12 col-sm-5 pull-right">
+				<div id="circular-menu-wrapper">
+				</div>
+			</div>
+
+			<!--<div class="triangle"></div>-->
+
+			<section class="col-xs-12 col-sm-7 pull-left gradient-bg" id="harj-content-wrapper">
+				<article class="harjoitus content-section" id="h-1">
+					<h2>H1: HTML 5 + CSS</h2>
+					<p>Ensimmäinen tehtävänanto oli melko yksinkertainen ja helppo toteuttaa. Harjoitus 1 koski HTML5 ja CSS kieliä, joiden avulla tuli muodostaa järkevästi rakennettu ja selkeästi tyylitelty sivusto.</p>
+					<p>Minulla oli jonkin verran aikaisempaa kokemusta HTML5 ja CSS kielistä, minkä ansiosta selvisin perusvaatimuksista nopeasti. Päätin perusrakenteen valmiiksi saatuani kokeilla kehitellä jotain extra toiminnallisuutta sivustooni. Vaikka Javascriptin opettelu tulee vasta toisella kierroksella, päätin käyttää sitä jo nyt. Toteutin sivun taustalle liikkuvan taustakuvan, jonka voi halutessaan pysäyttää napista ja laittaa taas päälle. Mielestäni liikkuva taustakuva antaa vaikutelman, että sivu koostuu useista tasoista. Liikkuva tausta on päällä ainoastaa tietokoneella, sillä mobiililaitteet eivät tarvitse/tue liikkuvaa taustakuvaa.</p>
+					<p>'Harjoitukset' sivulle (sivu jolla olet) halusin yrittää luoda hieman erikoisemman valikon eri harjoitusten läpikäymistä varten. Ideana oli luoda valikko, jonka linkit sijoittuvat ympyrän kaarelle. Halusin myös, että valikko aukeaa viuhkan lailla. Mielestäni valikko ja sen animaatio onnistuivat todella hyvin. Ne toimivat ainakin Chrome 37 ja Firefox 32 versioissa. Muutenkin sivusto toimii edellä mainituilla selaimilla sekä Windows 7 käyttöjärjestelmällä.</p>
+					<p>Jokaisella sivulla navigaatiopalkki menee alaspäin skrollatessa piiloon ja tulee esiin ylöspäin skrollatessa. Mielestäni tämä auttaa käyttäjää navigoimaan nopeammin ja pitää navin pois sivun sisällön tieltä. Lisäksi navigaatiosta näkee selkeästi millä sivulla käyttäjä on. Halusin myös parantaa anchor linkkien käytettävyyttä lisäämällä sivustoon <a href="http://css-tricks.com/snippets/jquery/smooth-scrolling/">scriptin</a>, joka poistaa normaalin hyppivän siirtymisen ja korvaa sen sulavalla liikkeellä. Huomaat tämän, kun kokeilet tämän sivun oikeassa laidassa olevaa valikkoa.</p>
+					<p>Kiipeily-teeman sain kaveriltani, joka harrastaa kiipeilyä. Lisäsin myös jokaiselle sivulle teemani mukaisen kuvan, jotka muokkasin Photoshopilla. Kaikki kuvat sain <a class="url fn" href="http://500px.com/psychid">Timo Junttilalta</a>.</p>
+					<p>Käytin <a href="http://necolas.github.io/normalize.css/">normalize.css</a> scriptiä, joka oli mainittu kurssin luentokalvoissa, avuksi yhtenäistämään selainten välisiä eroja. Tein myös harjoituskierroksen bonus osuuden käyttäen <a href="http://getbootstrap.com/getting-started/">Bootstrapin</a> tarjoamaa responsiivistä columni rakennetta. Hyödynsin myös Bootstrapin tarjoamia ominaisuuksia, kuten glyphiconia ja tooltipiä. Latasin sivun käyttämät fontit <a href="https://www.google.com/fonts">Google fonts</a> palvelusta.</p>
+					
+
+				</article>
+				<article class="harjoitus content-section" id="h-2">
+					<h2>H2: Javascript</h2>
+					<p>Toisen harjoituskierroksen aiheita olivat Javascript, JSON ja REST. Kierroksen tehtävät olivat huomattavasti haastavampia, kuin ensimmäisen kierroksen tehtävät. Minulla oli onneksi aikaisempaa kokemusta Javascriptistä ja Jquerystä, mutta JSON ja REST olivat uusia tuttavuuksia. Kierroksella oli paljon enemmän tehtäviä, mutta päätin yrittää tehdä ne kaikki ja sainkin jokaiseen toimivan ratkaisun.</p>
+					<p>Numeronarvauspelin tekeminen oli melko simppeliä ja sainkin sen tehtyä nopeasti. En ollut varma oliko peli tarkoitus liittää osaksi sivua, mutta päätin sijoittaa sen etusivulle. Muokkasin sen myös sopimaan paremmin sivuni teemaan. Katso  <a href="index.html#guess-the-number-wrapper">numeronarvauspeli</a>.</p>
+					<p>Uutisikkuna-tehtävä oli harjoituskierroksen vaikein osuus. Minulla kesti jonkin aikaa keksiä logiikka, miten tallennan uutiset local storageen järkevästi siten, että pystyn hakemaan sieltä tietyn uutisen tarvittaessa. Lisäksi nappien toiminnallisuuksien kanssa minulla oli hieman haasteita. Mielestäni lopullinen ratkaisuni toimi kuitenkin hyvin ja sain valmiiksi kaikki 'Uutisikkuna'-tehtävään liittyvät vaatimukset. Voit katsoa uutisikkunan <a href="index.html#news-wrapper">täältä</a>.</p>
+					<p>Sivun optimointi oli todella yksinkertaista ja suoraviivaista. Olin jo ensimmäisen kierroksen aikana yrittänyt kompressoida kaikki kuvat mahdollisimman pieniksi siten, että kuvanlaatu pysyy hyvänä. Muokkasin tällä kierroksella muutamia kuvia Photoshopilla vielä lisää (lähinnä rajasin) ja käytin kaikki kuvat Kraken IO:n kautta, mikä pienensi niiden kokoa. Muiden tiedostojen kompressointi onnistui helposti tehtävänannossa mainitun <a href="http://htmlcompressor.com/compressor/">sivuston</a> avulla.</p>
+					<p>REST osuus oli myös haastava: en osannut päättää, mitä REST API:ja käyttäisin hyväksi enkä myöskään ollut täysin selvillä REST:in ominaisuuksista. Valitsin lopulta Flickr ja Wikipedia REST API:t, koska keksin niille järkevimmät käyttötarkoitukset sivuni teemaan liittyen.</p>
+					<p>Flickr API:sta löytyi todella paljon dokumentaatiota, joten sen käyttöönottaminen oli pienen tutkimisen jälkeen suoraviivaista. Lisäsin etusivulle <a href="index.html#get-pics">kohdan</a>, jossa voi katso Flickr kuvia hakusanalla 'rock climbing'. Olisi ehkä ollut järkevämpää antaa käyttäjän valita hakusana, mutta en halunnut, että sivulle voi ladata mitä tahansa kuvia. Wikipedia API:n kanssa minulla oli taas enemmän ongelmia, sillä en löytänyt hyvää tutoriaalia sen käyttämisestä. Sain lopulta lisättyä 'Roclimbers'-sivulle kohdan, jossa voi tutustua eri <a href="about.html#wiki-topics">kiipelylajeihin</a>.</p>
+					<p>Kaiken kaikkiaan toinen harjoituskierros oli mukavan haastava ja sen kautta pääsin tutustumaan uusin tekniikoihin. Harjoituskierroksen toteutukset toimivat ainakin Chrome 37 versiolla ja Windows 7 käyttöjärjestelmällä.</p>
+					
+				</article>
+				<article class="harjoitus content-section" id="h-3">
+					<h2>H3: Photoshop</h2>
+					<p>Olin hankkinut valmiiksi Photoshop kierrosta varten kiipeily aiheisia kuvia samalta henkilöltä (<a class="url fn" href="http://500px.com/psychid">Timo Junttilalta</a>), jolta sain aikaisemmat sivustolla käyttämäni kuvat.</p>
+					<p>Lähdin liikkeelle ideasta, että haluan eristää (syväys) saamistani kuvista kiipeilijät ja lisätä heidät jonnekin aivan toisenlaiseen ympäristöön. Käytin Interrail matkani aikana otettuja kuvia ympäristöjen luomiseksi (linna, pylväs, riemukaari ja kaupunki). Käytin "quick selection" työkalua suurpiirteisen tasomaskin luomiseen ja hion sen "brush" työkalun avulla. Kun olin saanut eristettyä kiipeilijät ympäristöstään, aloin lisäämään niitä yksitellen omaan ympäristöönsä. Tähän käytin hyväksi värisäätötasoja, joiden avulla yhtenäistin kuvien värimaailmat sopimaan toisiinsa. Päätin muokata kaikki kuvat hieman mustavalkoiseksi, sillä tämän avulla kuvat sulautuivat astetta paremmin toisiinsa.</p>
+					<p>Kun olin saanut lisättyä kiipeilijät ympäristöihinsä, tajusin, että niitä oli hieman vaikea nähdä, minkä takia päätin lisätä zoom efektin. Zoom efektin loin leikkaamalla kuvista osasen ja suurentamalla sitä. Suurennuslasin tein "Ellipse" työkalulla ja käytin myös hyväksi sekoitustiloja, suodattimia (emboss, blur) ja tasotyylejä (color overlay, stroke). Tajusin myös, että kiipeilijät eivät sulautuneet täysin ympäristöönsä, koska heiltä puuttui varjot. Nämä lisäsin yksinkertaisesti "brush" työkalulla ja sekoitustilojen avulla (opacity).</p>
+					<p>Koska kuvan oli tarkoitus olla mainoslehtinen, piti sen täten mainostaa jotain. Keksin urbaanin kiipeilyn aiheen kuvien ympäristöistä ja ajattelin, että juliste voisi mainostaa tällaista uutta kiipeilymuotoa. Tietenkin julkisissa rakennuksissa kiipeily on laitonta, mutta mielestäni idea oli kuitenkin hauska ja sopi sivustoni teemaan.</p>
+					<p>Tein myös tehtäväkierroksen bonustehtävän. Olin jo heti ensimäisellä kierroksella tehnyt sivulleni logon, mutta päätin tällä kierroksella hieman päivittää sitä. Lisäsin logoon pyöreät kulmat, muokkasin hieman tekstiä ja opettelin käyttämään "clipping mask" työkalua läpinäkyvyyden aikaansaamiseksi.</p>
+					<p>Lopuksi loin kaksi eri versiota mainoslehtisestä: normaali ja sarjakuvamainen. Päätin käyttää sarjakuva versiota tehtävän palautuksessa, koska siinä kiipeilijät sulautuivat paremmin ympäristöönsä. Mielestäni onnistuin tässä harjoituskierroksessa melko hyvin: sain käytettyä kaikkia kierroksella vaadittuja tekniikoita ja opin samalla uusia asioita. Olin myös tyytyväinen siitä, kuinka hyvin kiipeilijät sulautuivat epänormaaleihin ympäristöihin.</p>
+					<p>Tein tehtävän Adobe Photoshop 12.1 versiolla</p>
+					<strong><p>Lataa tiedostot:</p></strong>
+					<a href="Mainoslehtinen_paino.jpg">Mainoslehtisen painoversio (.jpg)</a><br>
+					<a href="Mainoslehtinen.psd">Mainoslehtisen työtiedosto (.psd)</a><br>
+					<a href="Logo.psd">Logon työtiedosto (.psd)</a><br>
+					<br>
+					<strong><p>Mainoslehtisen verkkoversio:</p></strong>
+					<img src="Mainoslehtinen_verkko.jpg">
+				</article>
+
+				<article class="harjoitus content-section" id="h-4">
+					<h2>H4: HTML5 Canvas</h2>
+					<p>Neljännen harjoitustyön aiheena oli HTML5 canvas. Tehtävänä oli luoda yksinkertainen peli omaan aiheeseensa liittyen. Olin jo ennen kierrosta miettinyt pelin ideaa: <i>pelaaja kerää magnesiumpusseja pysyäkseen kiinni seinässä ja pelaajan ympärillä liikkuu muita kiipeilijöitä, jotka voivat myös kerätä pusseja.</i></p>
+					<p>Lähdinkin toteuttamaan tätä ideaa ja huomasin heti alussa, että tämä kierros on paljon haastavampi kuin edelliset kierrokset. En ole aikaisemmin käyttänyt <i>canvas</i> elementtiä tai siihen liittyviä Javascript kirjastoja. Alussa suurin osa ajasta menikin canvaksen perusominaisuuksien ja functioiden ymmärtämiseen, kuten spriten piirtämiseen canvakselle.</p>
+					<p>Kun olin ymmärtänyt, kuinka canvas elementti toimii, aloin luomaan itse peliä. Pelilogiikan ja siihen tarvittavien funktioiden luominen oli myös haastavaa, koska en ole ennen pelejä tehnyt. Otin mallia kurssin esimerkkikoodeista, mikä helpotti ja nopeutti jonkin verran toteutusta. Lisäksi olin heti alussa päättänyt, että teen harjoituskierroksen bonusosion, mikä lisäsikin peliin monimutkaisuutta. Tein ensin kaikki kierroksen pakolliset osiot, jonka jälkeen aloin kehitellä extraominaisuuksia: <b><i>esineen keräily, kiipeilijän otepalkki, vaikeusasteet, ajanotto ja uudelleen pelattavuus.</i></b></p>
+					<p>En käyttänyt peliä luodessa mitään ulkoista kirjastoa, vaan loin esim. törmäystarkasukset itse. Todettakoon, että vastustajakiipeilijät väistävät toisiaan melko hyvin, mutta kiipeilijää eivät niinkää hyvin. En halunnut lähteä tekemään monimutkaista törmäystestiä, koska halusin pitää pelilogiikan yksinkertaisena.</p>
+					<p>Piirsin alustavat spritet itse Photoshopilla, mutta en ollut tyytyväinen niihin, joten etsin niiden tilalle valmiit spritet. Tein löytämiini spriteihin muutamia muutoksia: vaihdoin värejä ja loin uusia kiipelyasentoja. En tehnyt täysin vastustajille täysin omaa spriteä, vaan käytin pelaajan spriteä hyväksi muuttaen vain sen värejä.</p>
+					<p>Tajusin loppu vaiheilla, että player ja enemy luokat ovat hyvin samanlaiset ja ne voisi osin yhdistää yhteiseksi yläluokaksi. En kuitenkaan halunnut alkaa tekemään muutoksia toimivaan ratkaisuuni, joten jätin luokat sellaisiksi kuin ne olivat.</p>
+					<p>Tein kaikki harjoituskierroksen tehtävät ja toteutukset toimivat ainakin <b>Chrome 37</b> versiolla ja <b>Windows 7</b> käyttöjärjestelmällä. Peli näkyy ainoastaan isoilla ruuduilla, eli se ei toimi mobiililaitteilla. Huomattuja bugeja ovat: <i>aikaisemmin mainittu ongelma, että vastustajat eivät väistä tarpeeksi hyvin/nopeasti pelaajaa</i> + <i>jos vastustajia lisää liian nopeasti, voivat ne tarttua kiinni toisiinsa ja jäädä jumiin kentän kulmaan</i>.</p>
+					Lue alla olevat ohjeet ja kokeile peliä!
+					<br>
+					<br>
+					<div id="climbing-game-wrapper">
+						<h3>Climbing Game</h3>
+						<details style="font-size:16px;">
+							<summary style="cursor:pointer;"><b>Ohjeet:</b></summary>
+							<div style="padding-top:10px; font-family:'Oswald', sans-serif">
+								<p>Liikuta pelaajaa <i>nuolinäppäimillä</i> ja kerää mangesiumpusseja, jotta otteesi ei lipsu seinästä. Kun oikealla oleva <b>Grip</b> palkki menee nollaan, putoat ja peli loppuu!</p>
+								<p>Muut kiipeilijät (vastustajat) liikkuvat satunnaisiin paikkoihin pelikentällä ja pyrkivät väistämään sinua ja toisiaan. Vastustajat pystyvät myös keräämään pusseja, jos he sattuvat osumaan sellaiseen.</p>
+								<p>Voit kasvattaa/hidastaa pelaajan nopeutta <i>Faster</i> ja <i>Slower</i> napeista (nopeuksilla on äärirajat!). Voit myös halutessasi pysäyttää pelin <i>Pause</i> napista ja jatkaa sitä esiin tulleesta <i>Resume</i> napista.</p>
+								<p>Mikäli haluat pelikentälle lisää vipeltäviä vastustajia, voit lisätä niitä <i>Add Enemy</i> napista (tälläkin on ääriraja!). Voit poistaa vastustajia klikkaamalla niitä hiiren vasemmalla painikkeella.</p>
+								<p>Jos peli tuntuu liian helpolta, voit vaihtaa sen vaikeusastetta <i>Easy, Medium, Hard</i> nappeja painamalla.</p>
+								<p><b>Let's play!</b></p>
+							</div>
+						</details>
+						<br>
+						<div id="menu">
+							<h1></h1>
+							<span></span>
+							<button id="start-game">Start Game</button>
+						</div>
+						<canvas id="climbing-game" width="600" height="500"></canvas>
+						<div id="grip-bar"><div id="bar"></div></div>
+						<div id="game-controls">
+							<button id="faster">Faster</button>
+							<button id="slower">Slower</button>
+							<button id="pause">Pause</button>
+							<button id="resume">Resume</button>
+							<button id="add">Add enemy</button>
+							<div id="difficulties">
+								<button class="difficulty active" id="easy">Easy</button>
+								<button class="difficulty" id="medium">Medium</button>
+								<button class="difficulty" id="hard">Hard</button>
+							</div>
+							<span id="info-text"></span>
+						</div>
+					</div>
+				</article>
+
+				<article class="harjoitus content-section" id="h-5">
+					<h2>H5: HTML5 Video/Audio</h2>
+					<p>Viides harjoituskierros käsitteli HTML5 videota ja audiota. Tarkoituksena oli tehdä omaan aiheeseen liittyvä video ja lisätä siihen efektejä, kuten itse nauhoitettuja ääniä. Päädyin hankkimaan kaikki videomateriaalit <a href="http://vimeo.com/search?from=everyone&field_title=1&field_description=1&field_tag=1&time=any&filter_plays=0&filter_likes=0&filter_comments=0&duration_min=00%3A00%3A00&duration_max=&quality%5B%5D=sd&quality%5B%5D=hd&cc=by-nc&q=rock%20climbing">Vimeosta</a>, koska kiipeilyvideoita on "melko" vaikeaa kuvata itse. Latasin "Attribute-NonCommericial" lisenssillä olevia videoita ja leikkasin niistä alle minuutin mittaisen traileri videon tulevalle Roclimbers elokuvalle.</p>
+					<p>Halusin videoon stereotyyppisiä traileri ääniä, joten käytin FinalCutKing nimisen henkilön tarjoamaa <a href="http://finalcutking.com/movie-voice/">Movie Voice</a> äänikirjastoa. Kirjastossa on yli sata erilaista laadukkaasti nauhoitettua traileri ääntä, joista sain yhdistelemällä aikaiseksi järkevän sekä hauskan ääniraidan. Nauhoitin myös itse trailerin alussa olevat inisevät / vinkuvat äänet, jotka tahdistin videoon Javascriptillä.</p>
+					<p>Muunsin videot tarvittaviin tiedostomuotoihin kurssin luentokalvoissa mainotun sivuston avulla. Käytin <a href="http://www.videojs.com/">videojs</a> kirjastoa mahdollistaakseni videon kaikille käyttäjille. Kuva- ja äänimateriaalien esilatausta varten seurasin kurssin esimerkkikoodeja.</p>
+					<p>Videoon avautuu noin 15s kohdalla mahdollisuus lisätä Optical Flareja, joiden tarjoitus on lisätä videon visuaalista näyttävyyttä. Nämä kuvatiedostot sain <a href="http://lespngenfolies.blogspot.fr/p/png-optical-flares.html">Lespngfolies</a> nimisestä blogista, joka tarjoaa ilmaiseksi erilaisia png kuvia.</p>
+					<p>Tein kaikki kierroksen tehtävät - myös bonustehtävän. Bonustehtävää varten seurasin <a href="http://html5doctor.com/video-canvas-magic/">Html5doctor</a> sekä <a href="http://www.html5canvastutorials.com/advanced/html5-canvas-invert-image-colors-tutorial/">Html5canvastutorials</a> sivustojen ohjeita canvakselle piirtämisestä ja kuvadatan muokkaamisesta. Canvas elementin alla on kaksi nappia: <i>"Black &amp; White"</i> sekä <i>"Invert"</i>, joista ensimmäinen muuttaa videon mustavalkoiseksi ja toinen kääntää videon värit päinvastaisiksi.</p>
+					<p>Kierroksen video löytyy <a href="index.html#roclimbers-video">etusivulta</a> ja bonustehtävässä luotu canvas tulee näkyviin, kun videon käynnistää. Harjoituskierroksen toteutukset toimivat ainakin Chrome 37 versiolla ja Windows 7 käyttöjärjestelmällä.</p>
+				</article>
+
+				<article class="harjoitus content-section" id="h-6">
+					<h2>H6: Projektityö</h2>
+					<a href="game/game.html">Linkki projektityöhön</a>
+					<h4>Tavoitteet</h4>
+					<p>Tavoitteena oli luoda ns. "vertical scroller"-peli, jossa pelaaja liikkuu pystysuunnassa ja taustalla oleva kenttä liikkuu pelaajan mukana. Pelin pääteemaan, kiipeilyyn, tämä sopi hyvin. Pelin toista teemaa zeniä lisättiin toisen kentän tematiikkaan musiikin ja grafiikan avulla. Erityisesti pelissä haluttiin keskittyä pelattavuuteen ja kokonaisvaltaiseen kokemukseen.</p>
+					<h4>Käytetyt kirjastot ja tekniset ominaisuudet</h4>
+					<p>Peli on testattu ja toimii ainakin Mac OS X Yosemite ja Windows 7 käyttöjärjestelmillä Chromen versiolla 39. Peli käyttää lukuisia kirjastoja. Ensimmäisenä näistä on <a href="http://jquery.com/">jQuery-kirjasto</a>, jota käytetään html- ja css-elementtien manipulointiin. Pääasiallisena pelikirjastona käytettiin <a href="http://www.createjs.com/#!/EaselJS">EaselJs</a>:ssää, sekä äänien hallinnointiin sen sisarkirjastoa <a href="http://www.createjs.com/#!/SoundJS">SoundJ:ssää</a>. Näiden lisäksi käytettiin pikselitarkkaan osumatarkistukseen <a href="https://github.com/olsn/Collision-Detection-for-EaselJS">"ndgmr-Collision"</a>-kirjastoa.
+					<br>
+					Peli esilataa kaikki sen käyttämät kuva- ja äänitiedostot ennen päävalikon näyttämistä. Pelin luokkajako on aika yksinkertainen. Pelissä on luokka pelaajalle, jossa hallinoidaan liikkumiseen ja pelaajaan animointiin liittyviä tietoa, tasoluokassa tasoihin liittyvää tietoa, tavaraluokassa kiviin liittyvää tietoa ja UI-luokassa kaikki valikkoihin liittyvä. Tavaraluokka tehtiin sitä silmälläpitäen, että sen voisi laajentaa yläluokaksi ja näin voitaisiin helposti luoda useita erilaisia tavaroita. Lopulta aikarajoituksista johtuen muita tavaroita ei lisätty peliin.
+					<br>
+					Pelin pääsilmukassa päivitetään kaikkia peliobjekteja ja tarkistetaan niiden välisiä törmäyksiä. Peli alkaa siitä kun päävalikossa valitaan taso ja painetaan "Start Game"-nappia. Pelin alussa pelaaja on vuoren pohjalla ja peli loppuu, kun pelaaja kiipeää vuoren päälle. 
+					<br>
+					Pelaajan animaatio riippuu tämän liikesuunnasta. Tämän lisäksi pelaajalla on erityinen voittoanimaatio, kun se saavuttaa vuoren huipun.</p>
+					<h4>Pelimekaniikat</h4>
+					Pelissä ohjataan pelaajaa nuolinäppäimillä, ohjeet ovat näkyvissä myös päävalikosta avautuvassa "guide"-valikossa. Peli voidaan keskeyttää Esc-painikkeella. Tarkoitus on ohjastaa pelaaja vuoren huipulle. Pelaajan voi kiivetä vain rajatulla alueella ja samalla on väisteltävä kiviä. Pelissä voi valita kahdesta kentästä, sekä näissä edelleen kolmesta vaikeustasosta. Vaikeusaste määrittää tippuvien kivien määrän. Kivet tippuvat satunnaisesti. Pelin alussa pelaaja alottaa ruudun alaosasta, mutta kiivetessään ylöspäin pelaaja liikkuu korkeammalle, tehden kiven väistelystä progressiivisesti hankalempaa.
+					<h4>Bugit</h4>
+					Pelissä ei pitäisi olla jäljellä mitään bugeja, viimeisimmissä versiossa viidakkotasossa pelaaja toisinaan luotiin virheellisesti kentän keskelle lähes kentän loppuosaan. Tämän bugin pitäisi olla kuitenkin korjaantunut.
+					<h4>Lähteet</h4>
+					<p><b>Äänet</b><br>Putoavien kivien ääni: <a href="http://soundbible.com/670-Swooshing.html">Soundbible</a><br>
+					Kuolevan pelaajan huuto: <a href="http://soundbible.com/1548-Scary-Scream.html">Soundbible</a><br>
+					Voittoääni: <a href="http://soundbible.com/1003-Ta-Da.html">Soundbible</a><br>
+					Ensimmäisen tason musiikki: <a href="http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100722">Incompetech</a><br>
+					Toisen tason musiikki: <a href="http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400050">Incompetech</a></p>
+
+					<p><b>Kuvat</b><br>Kiipelijäsprite: <a href="http://www.vg-resource.com/post-230401.html">The VG Resource</a><br>
+					Tasojen kuvat on luotu Photoshopilla käyttäen custom shapeja: <a href="http://www.brusheezy.com/shapes/36053-24-african-animal-shapes">Brusheezy</a><br>
+					Toisen tason buddhafiguuri: <a href="http://www.imagesbuddy.com/images/23/2013/05/lord-gautam-buddha.jpg">Imagesbuddy</a><br>
+					Menujen taustatekstuuri: <a href="http://subtlepatterns.com/dark-sharp-edges/">Subtlepatterns</a></p>
+				</article>
+				
+			</section>
+		
+		</div>
+
+		<!-- pikalinkki sivun ylälaitaan -->
+		<a id="to-top" href="#top"><img src="images/finger-up-circle.png" alt="Finger IMG" data-toggle="tooltip" data-placement="left" title="Ylös"></a>
+
+		<!-- Nappulat animaation pysäyttämiseksi -->
+		<button class="bg-animation" id="stop-bg-animation">Pysäytä taustan animaatio</button>
+		<button class="bg-animation" id="start-bg-animation" style="display:none;">Jatka taustan animaatiota</button>
+		
+		<footer>
+			<p>
+				© Copyright 2014 by
+				<span class="vcard">
+					<span class="fn">Teemu Taskula</span>, <span class="email">teemu.taskula@aalto.fi</span> -  <span class="org">Aalto-yliopisto</span>.
+				</span>
+			</p>
+			<p>
+				<span>All picture copyrights belong to <a class="url fn" href="http://500px.com/psychid">Timo Junttila</a></span>.
+			</p>
+		</footer>
+		
+		<!-- Canvas scripts -->
+		<!--<script type="text/javascript" src="js/creature.js"></script>-->
+		<script type="text/javascript" src="js/player.js"></script>
+		<script type="text/javascript" src="js/enemy.js"></script>
+		<script type="text/javascript" src="js/loot.js"></script>
+		<script type="text/javascript" src="js/animation.js"></script>
+	</body> 
+
+</html> 

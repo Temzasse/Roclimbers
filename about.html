@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="author" content="Teemu Taskula">
+		<link rel="icon" href="images/favicon.png">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery.details.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Flickr REST API -->
+		<script type="text/javascript" src="js/rest.js"></script>
+
+		<title>Roclimbers</title> 
+	</head> 
+
+	<body>
+		<!-- ankkuri sivun yläosalle -->
+		<div id="top"></div>
+
+		
+		<img id="header-img-center" src="images/header-home.png" alt="Header Home IMG">
+		<img id="header-img-right" src="images/header-harj.png" alt="Header Harjoitus IMG">
+		<img id="header-img-left" src="images/header-proj.png" alt="Header Projekti IMG">	
+
+
+		<nav>
+			<ul>
+				<li class="selected"><a href="about.html">Roclimbers</a></li>
+				<li><a href="project.html">Projekti</a></li>
+				<li><a href="assignments.html">Harjoitukset</a></li>
+				<li><a href="index.html">Etusivu</a></li>
+			</ul>
+		</nav>
+
+		<header>
+			<img id="logo" src="images/logo.png" alt="Logo IMG">
+		</header>
+
+
+		<!-- Projekti sivun pääsisältö -->
+		<div class="container-fluid" id="about-wrapper">
+
+			<section class="col-xs-12 col-sm-8 col-sm-offset-2 gradient-bg" id="about-content-wrapper">
+				<div class="content-section">
+					<h1 class="section-title">Climb hard. Fall harder.</h1>
+					<div style="padding:15px;">
+						<h2>Rocklimber on hardcore kiipeilyyn keskittyvä sivusto, joka pyrkii innoittamaan kiipeilijöitä ottamaan enemmän riskejä!</h2>
+						<p>Tuntuuko sinustakin, että tavallinen kiipeily on liian helppoa ja turvallista? Kaipaatko adrenaaliinin tuomaan elävöittävää tunnetta?</p>
+						<p>Liity Roclimber-ammattilaisten joukkoon ja opi kiipeilemään ilman köyden antamaa turvaa. Teemme matkoja ympäri maailmaa etsien sitä täydellistä kallioseinämää, joka tarjoaa "Once In A Lifetime" kokemuksia. Rocklimber tarjoaa myös laajan kirjon henkivakuutuksia, jotta perheenjäsenesi voivat jatkaa onnellista elämää putoamisesi jälkeen! Joten älä turhia murehdi, vaan liity Rocklimbersin upeaan ryhmään ja tule testaamaan kuinka monta seinää ehdit kiivetä ennen kuin putoat.</p>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h1 class="section-title">Kiipeilyyn liittyvää tietoa</h1>
+					<h2 style="text-align:center;margin-top:30px;">Katso mitä eroa eri kiipelylajeilla on!</h2>
+
+					<div id="wiki-topics">
+						<button class="get-wiki-info btn btn-default btn-lg" value="solo%20climbing">Solo Climbing</button>
+						<button class="get-wiki-info btn btn-default btn-lg" value="rock%20climbing">Rock Climbing</button>
+						<button class="get-wiki-info btn btn-default btn-lg" value="indoor%20climbing">Indoor Climbing</button>
+						<button class="get-wiki-info btn btn-default btn-lg" value="bouldering">Bouldering</button>
+					</div>
+
+					<article id="wiki-topic-wrapper">
+						<h2></h2>
+						<p></p>
+					</article>
+
+				</div>
+
+				<div class="content-section">
+					<h1 class="section-title">Vakuutukset</h1>
+					<div style="padding:15px;">
+						<article>
+							<h2>Vakuutus 1</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+						</article>
+						<article>
+							<h2>Vakuutus 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+						</article>
+						<article>
+							<h2>Vakuutus 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat urna ut rutrum consectetur. Sed ultricies ipsum eu nunc congue, id placerat est luctus. Sed pretium mi vel tristique laoreet. Suspendisse eu lectus sed orci vestibulum tempus. Praesent mattis risus eget arcu sollicitudin elementum. Pellentesque eget molestie lectus. In justo turpis, accumsan in quam a, fermentum ultricies odio. Morbi mollis at mi in consequat. Ut volutpat nunc iaculis facilisis luctus. Etiam consequat nisi quis libero tristique tristique.</p>
+						</article>
+					</div>
+				</div>
+
+			</section>
+		
+		</div>
+
+		<!-- pikalinkki sivun ylälaitaan -->
+		<a id="to-top" href="#top"><img src="images/finger-up-circle.png" alt="Finger IMG" data-toggle="tooltip" data-placement="left" title="Ylös"></a>
+
+		<!-- Nappulat animaation pysäyttämiseksi -->
+		<button class="bg-animation" id="stop-bg-animation">Pysäytä taustan animaatio</button>
+		<button class="bg-animation" id="start-bg-animation" style="display:none;">Jatka taustan animaatiota</button>
+
+		<footer>
+			<p>
+				© Copyright 2014 by
+				<span class="vcard">
+					<span class="fn">Teemu Taskula</span>, <span class="email">teemu.taskula@aalto.fi</span> -  <span class="org">Aalto-yliopisto</span>.
+				</span>
+			</p>
+			<p>
+				<span>All picture copyrights belong to <a class="url fn" href="http://500px.com/psychid">Timo Junttila</a></span>.
+			</p>
+		</footer>
+			
+	</body> 
+
+</html> 

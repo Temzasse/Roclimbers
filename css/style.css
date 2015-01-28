@@ -1,0 +1,659 @@
+
+
+/*---------------------------------------------------------------------------------------------*/
+/* Yhteiset */
+
+body{
+	margin: 0px;
+	font-family: 'Roboto', sans-serif !important;
+	word-wrap: break-word;
+	background-image: url("../textures/congruent_outline.png");
+	background-repeat: repeat;
+}
+h3, h2, h1{
+	font-family: 'Oswald', sans-serif !important;
+	color: #00476B !important;
+}
+h1{
+	font-size: 22px !important;
+}
+h2{
+	font-size: 18px !important;
+}
+h3{
+	font-size: 16px !important;
+}
+header{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+nav{
+	height: 60px;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 2;
+	-webkit-transition: top 0.3s ease-in-out;
+    		transition: top 0.3s ease-in-out;
+}
+
+.nav-up {
+    top: -66px !important;
+}
+nav ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+nav li {
+    display: inline;
+	border-left: 1px solid #fff;
+	padding: 15px;
+	float: right;
+}
+nav li:hover, nav li.selected {
+    background: rgba(255,255,255, 0.2);
+}
+nav li a:hover{
+	color: #fff;
+    text-decoration: none;
+}
+nav a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+.bg-animation{
+	position: fixed;
+	right: 30px;
+	bottom: 10px;
+	font-size: 12px;
+	font-family: 'Oswald', sans-serif;
+	border: 2px solid #999999;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+}
+#header-img-home{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+}
+#logo{
+	margin-top: 100px;
+	width: 350px;
+	max-width: 80%;
+}
+#to-top img{
+	height: 50px;
+	width: auto;
+	position: fixed;
+	right: 30px;
+	bottom: 40px;
+	opacity: 0.7;
+}
+#to-top img:hover{
+	opacity: 1;
+}
+footer{
+	background: rgba(0,0,0, 0.5);
+	height: 60px;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+}
+footer p{
+	font-size: 12px;
+	padding: 5px;
+	margin: 0px;
+}
+footer a{
+	color: #FF9933;
+	text-decoration: none;
+}
+
+.content-section{
+	margin-bottom: 50px;
+	box-shadow: 0px 2px 10px #A8A8A8;
+	border-bottom: 5px solid #E0E0E0;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*Etusivu*/
+
+#home-wrapper{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	display: none;
+}
+#home-content-wrapper, #news-wrapper{
+	background: #fff;
+	box-shadow: 1px 1px 10px #000;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+}
+#home-content-wrapper article, #news-wrapper article{
+	padding: 15px;
+}
+
+#sidebar, #mobile-menu-wrapper{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+}
+#sidebar a, #mobile-menu-wrapper a{
+	text-decoration: none;
+	color: #fff;
+}
+#sidebar summary, #mobile-menu-wrapper summary{
+	cursor: pointer;
+}
+#sidebar details, #mobile-menu-wrapper details{
+	/*border: 2px solid #999999;*/
+	border-radius: 10px;
+	padding: 10px;
+	
+}
+#sidebar ul, #mobile-menu-wrapper ul{
+	padding: 0px;
+	margin: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	border-top: 2px solid #999999;
+	border-bottom: 2px solid #999999;
+}
+#sidebar li, #mobile-menu-wrapper li{
+	list-style: none;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+#sidebar li:nth-child(odd), #mobile-menu-wrapper li:nth-child(odd){
+	background: rgba(255,255,255, 0.1);
+}
+#sidebar li:nth-child(even), #mobile-menu-wrapper li:nth-child(even){
+	background: rgba(255,255,255, 0.2);
+}
+#sidebar li:hover, #mobile-menu-wrapper li:hover{
+	/*background: rgba(0,0,0, 0.5);*/
+	background: #00476B;
+}
+
+.section-title{
+	font-weight: 700;
+	padding:15px;
+	text-align:center;
+	margin:0;
+	text-transform: uppercase;
+	border-bottom: 5px solid #E0E0E0;
+}
+
+/* Numeronarvauspeli */
+#guess-the-number-wrapper{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 15px;
+	margin-bottom:50px;
+	border-bottom: 5px solid #E0E0E0;
+}
+#guess-the-number-wrapper p{
+	text-align: center;
+	margin:0;
+	font-weight: 700;
+}
+#guess-the-number-wrapper input{
+	margin: 5px;
+}
+p#guess-response{
+	font-size:16px;
+	color: red;
+}
+form#the-guess{
+	padding:10px;
+	text-align:center;
+}
+
+/* News */
+#piece-of-news span{
+	font-size: 12px;
+	float: right;
+}
+
+/* Flicrk API */
+#flickr-pics{
+	display: inline-block;
+	width: 100%;
+}
+#flickr-pics img{
+	width: 25%;
+	float: left;
+	padding: 15px;
+}
+#get-pics{
+	margin: 15px auto 15px;
+	display: block;
+
+}
+
+/* HTML5 video */
+#roclimbers-video-wrapper{
+	
+}
+#video-wrapper video{
+
+}
+.overlay{
+	display: none;
+	background-size: cover;
+	background-position: 50% 50%; 
+	position: absolute;
+	z-index: 99;
+}
+.overlay.visible{
+	display: block !important;
+}
+.overlay#of-1{
+	background-image: url("../textures/of_1.png");
+}
+.overlay#of-2{
+	background-image: url("../textures/of_2.png");
+}
+.overlay#of-3{
+	background-image: url("../textures/of_3.png");
+}
+#of-buttons-wrapper{
+	display: none;
+	margin-bottom: 10px;
+}
+#of-buttons-wrapper p{
+	font-size: 14px !important;
+	font-weight: 700;
+	color: #444 !important;
+	margin: 0;
+}
+.of-button, .cnv-button{
+	margin-top: 10px !important;
+	margin-right: 10px !important;
+}
+.of-button.selected, .cnv-button.selected {
+	background-color: #999 !important;
+	color: #fff;
+}
+#roclimbers-canvas-wrapper{
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+}
+#roclimbers-canvas{
+	width: 100%;
+}
+#roclimbers-canvas-wrapper.visible{
+	display: block;
+}
+#cnv-buttons-wrapper{
+	margin-top: 10px;
+}
+.cnv-button{
+	margin-bottom: 10px !important;
+}
+/*---------------------------------------------------------------------------------------------*/
+
+/*Harjoitukset*/
+.harjoitus{
+	padding: 15px;
+}
+#header-img-harj{
+	width: 40%;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+}
+#harj-wrapper{
+	padding: 30px;
+}
+#harj-content-wrapper{
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #000;
+	margin-bottom: 30px;
+}
+#harj-content-wrapper article{
+	border-bottom: 5px solid #E0E0E0;
+	margin-bottom: 40px;
+}
+#stop-bg-animation:hover, #start-bg-animation:hover{
+	background: #00476B;
+}
+#h-3 img{
+	max-width: 100%;
+}
+#menu{
+	z-index: 99;
+	width: 600px;
+	height: 500px;
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+}
+#menu h1{
+	display: none;
+	color: #fff !important;
+	font-size: 40px !important;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 100px;
+}
+#menu span{
+	display: none;
+	color: #fff !important;
+	font-size: 18px !important;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 180px;
+}
+#start-game{
+	position: absolute;
+	top: 225px;
+	left: 233px;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}
+#game-controls{
+	display: none;
+	margin-top: 10px;
+}
+#game-controls button{
+	margin-right: 15px;
+	text-transform: uppercase;
+	padding: 8px;
+	border-radius: 8px;
+	border: 1px solid #888;
+	background: #fff;
+}
+#resume{
+	display: none;
+}
+#info-text{
+	font-weight: 700;
+}
+#grip-bar{
+	display: none;
+	width: 20px;
+	margin-left: 10px;
+	background: #eee;
+	height: 500px;
+}
+#bar{
+	height: 100%;
+	background: green;
+	-webkit-transition: height 0.5s;
+   			transition: height 0.5s;
+}
+#difficulties{
+	border-left: 4px solid #eee;
+	display: inline-block;
+	padding-left: 10px;
+}
+.difficulty{
+	font-size: 12px;
+	padding: 5px !important;
+}
+.difficulty.active{
+	border: 4px solid #888 !important;
+}
+canvas#climbing-game{
+	background-image: url("../images/canvas/bg.jpg");
+	background-size: cover;
+}
+/*---------------------------------------------------------------------------------------------*/
+/* Projekti */
+#header-img-proj{
+	width: 20%;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+}
+#proj-wrapper{
+	padding: 30px;
+}
+#proj-content-wrapper{
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #000;
+	margin-bottom: 30px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* Circular menu*/
+
+#mobile-menu-wrapper{
+	display: none;
+}
+#circular-menu-wrapper{
+	position: fixed;
+	top: 300px;
+	right: 300px;
+	z-index: 99;
+	/*padding-top: 400px;
+	margin: 150px;*/
+}
+#circular-menu-wrapper .menu-unit{
+	-webkit-transition: -webkit-transform 1.5s cubic-bezier(.25,1.22,.43,1.11);
+					transition: transform 1.5s cubic-bezier(.25,1.22,.43,1.11);
+	position: absolute;
+}
+.triangle.enable-hover:hover {
+	border-top-color: rgba(255,255,255,0.2) !important;
+	/*margin-top: -140px !important;*/
+}
+.triangle {
+	width: 0;
+	height: 0;
+	z-index: 999;
+	border-radius: 20px;
+	/*position: absolute;*/
+}
+.triangle span{
+	font-size: 22px;
+	position: absolute;
+	color: #fff;
+	margin-left: -8px;
+	display: none;
+}
+.menu-unit .glyphicon-plus-sign{
+	display: inline-block;
+	font-size: 50px;
+	position: absolute;
+	color: #fff;
+	margin-left: 25px;
+}
+.menu-unit .glyphicon-plus-sign:hover{
+	color: #00476B;
+}
+/*---------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+/* About sivu */
+
+#header-img-left{
+	width: 20%;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+}
+#header-img-right{
+	width: 30%;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+}
+#header-img-center{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+}
+#about-wrapper{
+	padding: 30px;
+}
+#about-content-wrapper{
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #000;
+	margin-bottom: 30px;
+}
+
+#wiki-topics{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+
+}
+#wiki-topic-wrapper{
+	padding: 15px;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+/* Responsiivisuus */
+
+/*@media (max-width: 1400px){
+	#circular-menu-wrapper{
+		padding-top: 300px;
+	}
+	
+}
+@media (max-width: 1200px){
+	#circular-menu-wrapper{
+		padding-top: 200px;
+	}
+	
+}*/
+@media (max-width: 1300px){
+	#grip-bar{
+		width: 15px;
+	}
+	
+}
+@media (max-width: 1250px){
+	#climbing-game-wrapper{
+		display: none;
+	}
+}
+@media (max-width: 1200px){
+	#circular-menu-wrapper{
+		right: 200px;
+	}
+	#flickr-pics img{
+		width: 50%;
+	}
+	
+}
+@media (max-width: 900px){
+	#circular-menu-wrapper{
+		right: 200px;
+	}
+	#flickr-pics img{
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 768px){
+
+	#sidebar{
+		padding: 20px;
+	}
+	nav li a{
+		font-size: 18px;
+	}
+	nav{
+		height: 55px;
+	}
+	#to-top img{
+		right: 5px;
+	}
+	.bg-animation{
+		right: 5px;
+	}
+
+	#circular-menu-wrapper{
+		display: none;
+	}
+}
+
+@media (max-width: 500px){
+
+	nav li a{
+		font-size: 12px;
+	}
+	nav{
+		height: 51px;
+	}
+	#to-top img{
+		height: 30px;
+		right: 0px;
+	}
+}
+@media (max-width: 350px){
+
+	nav li a{
+		font-size: 12px;
+	}
+	nav li{
+		padding: 5px
+	}
+	nav{
+		height: 30px;
+	}
+}
+
+
+/*-------------------------------------------------*/
+
+.gradient-bg{
+	
+	background: -webkit-radial-gradient( #fff 80%, #D8D8D8 ) !important; /* Safari 5.1-6.0 */
+  	background: -o-radial-gradient( #fff 80%, #D8D8D8 ) !important; /* For Opera 11.6-12.0 */
+  	background: -moz-radial-gradient( #fff 80%, #D8D8D8 ) !important; /* For Firefox 3.6-15 */
+	background: radial-gradient( #fff 80%, #D8D8D8 ) !important;
+
+}
